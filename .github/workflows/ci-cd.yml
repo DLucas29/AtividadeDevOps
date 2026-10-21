@@ -1,0 +1,14 @@
+name: Ping Google
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Google
+        run: ping -c 4 google.com
